@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cross Border Application Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" /> 
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    
+</head>
+  <body> 
+	<div id="wrapper-bg">
+        <div id="wrapper">
+            <nav>
+                <div id="logo">
+                    <h1><a href="#"><span>COVID-19</span>INFORMATICS</a></h1>
+                </div>
+                <div id="menu">
+                    <ul class="nav-links">
+                        <li class="active"><a href="index.html">Homepage</a></li>
+                        <li>
+                            <a href="login.html">Sign In</a>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <script src="https:/code.jquery.com/jquery-3.3.1.js"></script>
+                    <script type="text/javascript">
+                        $(document).on('click', 'ul li', function() {
+                            $(this).addClass('active').siblings().removeClass('active');
+                        })
+                    </script>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </nav>  
+		</div>
+	</div>
+		
+      <form id="cross" name="cross" onsubmit="return apply()" required >
+        <div class="banner">
+          <h1>Cross Border Application Form</h1>
+        </div>		
+		
+        <div class="item" id="name">
+          <p>Name</p>
+          <div class="name-item">
+            <input type="text" name="name" placeholder="Name as in IC" required/>           
+          </div>
+        </div>
+		
+        <div class="item" id="date">
+          <p>Traveling Date</p>
+          <input type="date" name="date" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>              
+      
+        <div class="item" id="reason">
+          <p>Reason</p>
+          <textarea rows="3" required></textarea>
+		</div>
+		
+		<div class="item" id="phone">
+          <p>Phone</p>
+          <input type="text" name="phone" required/>
+		</div>
+		
+		<div class="item" id="email">
+          <p>Email</p>
+          <input type="text" name="email" required/>
+		</div>
+		
+		<div class="item" id="to">
+          <p>To State</p>        
+            <select required>
+              <option value="" selected></option>
+              <option value="1">Johor</option>
+              <option value="2">Melaka</option>
+              <option value="3">Selangor</option>
+              <option value="4">Kuala Lumpur</option>
+              <option value="5">Perak</option>
+			  <option value="6">Kedah</option>
+			  <option value="7">Pulau Pinang</option>
+			  <option value="8">Perlis</option>
+			  <option value="9">Terengganu</option>
+			  <option value="10">Kelantan</option>
+			  <option value="11">Pahang</option>
+			  <option value="12">Sabah</option>
+			  <option value="13">Sarawak</option>
+            </select>
+		</div>
+		
+		<div class="item" id="from">
+			 <p>From State</p>        
+            <select required>
+              <option value="" selected></option>
+              <option value="1">Johor</option>
+              <option value="2">Melaka</option>
+              <option value="3">Selangor</option>
+              <option value="4">Kuala Lumpur</option>
+              <option value="5">Perak</option>
+			  <option value="6">Kedah</option>
+			  <option value="7">Pulau Pinang</option>
+			  <option value="8">Perlis</option>
+			  <option value="9">Terengganu</option>
+			  <option value="10">Kelantan</option>
+			  <option value="11">Pahang</option>
+			  <option value="12">Sabah</option>
+			  <option value="13">Sarawak</option>
+            </select>
+          </div>
+        </div>
+       
+        <div class="btn" id="btn">         
+		<button type="submit" >Apply</button>		        
+		</div>
+			
+		<script type="text/javascript">
+		
+		function apply()
+		{				
+			 
+			 var a = document.forms["cross"]["name"].value;
+             
+			if (a != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");
+				document.forms["cross"].reset();
+				return false;
+				}
+			var b = document.forms["cross"]["date"].value;
+			if (b != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");
+				document.forms["cross"].reset();
+				return false;
+				}
+             var c = document.forms["cross"]["reason"].value;
+			 if (c != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");
+				document.forms["cross"].reset();
+				return false;
+				}
+             var d = document.forms["cross"]["phone"].value;
+			 if (d != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");
+				document.forms["cross"].reset();
+				return false;
+				}
+             var e = document.forms["cross"]["email"].value;
+			 if (e != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");
+				document.forms["cross"].reset();
+				return false;
+				}
+             var f = document.forms["cross"]["to"].value;
+			 if (f != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");
+				document.forms["cross"].reset();
+				return false;
+				}
+             var g = document.forms["cross"]["from"].value;
+			 if (g != "" || x != null ) {
+				alert("We have received your application. Your application is under review.");	
+				document.forms["cross"].reset();				
+				return false;
+				}
+		}
+
+		</script>
+		
+      </form>
+    </div>
+  </body>
+</html>

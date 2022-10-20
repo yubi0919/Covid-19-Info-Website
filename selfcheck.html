@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Endearing Green 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130425
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Self Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <script>
+        function nextQuestion() {
+            var c = 0;
+            var q1 = document.selfcheck.question1.value;
+            var q2 = document.selfcheck.question2.value;
+            var q3 = document.selfcheck.question3.value;
+            var q4 = document.selfcheck.question4.value;
+            if (q1 == "Yes") {
+                document.getElementById('result').innerHTML = 'Based on your symptoms, you may need urgent medical care.' + "<br>" +
+                    ' Please contact the nearest clinic/hospital for further medical checkup.';
+            } else {
+                document.getElementById('question').innerHTML = '<p>Question</p>' +
+                    '<p> < input type = "radio" name = "question2" value = "Yes"/> Yes </p>' +
+                    '<p> < input type = "radio" name = "question2" value = "No"/> No < /p>';
+            }
+            if (q2 == "Yes") {
+                c++
+            }
+            if (q3 == "Yes") {
+                c++
+            }
+            if (q4 == "Yes") {
+                c++
+            }
+
+        }
+
+        function check() {
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper-bg">
+        <div id="wrapper">
+            <nav>
+                <div id="logo">
+                    <h1><a href="#"><span>COVID-19</span>INFORMATICS</a></h1>
+                </div>
+                <div id="menu">
+                    <ul class="nav-links">
+                        <li class="active"><a href="index.html">Homepage</a></li>
+                        <li>
+                            <a href="login.php">Sign In</a>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <script src="https:/code.jquery.com/jquery-3.3.1.js"></script>
+                    <script type="text/javascript">
+                        $(document).on('click', 'ul li', function() {
+                            $(this).addClass('active').siblings().removeClass('active');
+                        })
+                    </script>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </nav>
+            <script src="app.js"></script>
+            <div id="selfcheckbody" class="container">
+                <header>
+                    <h1>SYMPTOM SELFCHECK</h1>
+                    <h3>If you wish to redo, please refresh the page</h3>
+                </header>
+                <div id="question" class="question">
+                    <form name="selfcheck1" id="selfcheck1">
+                        <!--
+                            temperature, coughing, shortness of breath, 
+                            sore throat, congestion or runny nose,new loss of smell or taste
+                            diarrhea, nausea or vomiting
+                        -->
+
+                        <p>Do you have any of these life-threatening symptoms below?<br/>
+                            <ul>
+                                <li>Bluish lips or face</li>
+                                <li>Extreme difficulty breathing</li>
+                                <li>Dehydration (dry lips and mouth, not urinating much, sunken eyes)</li>
+                                <li>Severe and constant pain or pressure in the chest</li>
+                                <li>Signs of low blood pressure</li>
+                                <li>Slurred speech or difficulty speaking</li>
+                                <li>New disorientation</li>
+                            </ul>
+                        </p>
+                        <p><input type="radio" name="question1" value="Yes" />Yes</p>
+                        <p><input type="radio" name="question1" value="No" />No</p>
+                        <input type="button" id="nextButton1" name="" value="Next" onclick="nextQuestion()" />
+                        <!--
+                            output:keep healthcare provider number handy
+                            -->
+                    </form>
+
+                    <form name="selfcheck2" id="selfcheck2">
+                        <p>Do you have any of the following symptoms?</p>
+                        <ul>
+                            <li>Fever</li>
+                            <li>Cough</li>
+                            <li>Mild or moderate difficulty breathing</li>
+                            <li>Sore throat</li>
+                            <li>Body aches</li>
+                            <li>Headache</li>
+                            <li>Congestion or runny nose</li>
+                        </ul>
+                        <p><input type="radio" name="question2" value="Yes" />Yes</p>
+                        <p><input type="radio" name="question2" value="No" />No</p>
+                        <input type="button" id="nextButton2" name="" value="Next" onclick="nextQuestion()" />
+                    </form>
+
+                    <form name="selfcheck3" id="selfcheck3">
+
+                        <p>Have you been in close contact with individual suffering COVID-19?
+                            <br/>Close contact means:
+                            <ul>
+                                <li>being within 1 metre individual suffering COVID-19 for total 15 minutes or more over one-day period <b>or</b></li>
+                                <li>having direct physical contact with individual suffering C0VID-19 <b>or</b></li>
+                                <li>sharing eating or drinking utensils with individual suffering COVID-19 <b>or</b></li>
+                                <li>being sneezed on or coughed on by individual suffering COVID-19</li>
+                            </ul>
+                            <br/>
+                        </p>
+                        <p><input type="radio" name="question3" value="Yes" />Yes</p>
+                        <p><input type="radio" name="question3" value="No" />No</p>
+                        <input type="button" id="nextButton3" name="" value="Next" onclick="nextQuestion()" />
+                    </form>
+
+                    <form name="selfcheck4" id="selfcheck4">
+                        <p>Have you worked or volunteered in a healthcare facility or as a first responder in the last two weeks?
+                            <br/>Healthcare facilities include: hospital, dental care or other medical setting, long term care facility, or nursing home.</p>
+                        <p><input type="radio" name="question4" value="Yes" />Yes</p>
+                        <p><input type="radio" name="question4" value="No" />No</p>
+                        <input type="button" id="nextButton4" name="" value="Next" onclick="nextQuestion()" />
+                    </form>
+
+                    <script>
+                        var selfcheck1 = document.getElementById("selfcheck1");
+                        var selfcheck2 = document.getElementById("selfcheck2");
+                        var selfcheck3 = document.getElementById("selfcheck3");
+                        var selfcheck4 = document.getElementById("selfcheck4");
+                        var nextButton1 = document.getElementById("nextButton1");
+                        var nextButton2 = document.getElementById("nextButton2");
+                        var nextButton3 = document.getElementById("nextButton3");
+                        var nextButton4 = document.getElementById("nextButton4");
+                        var aq2 = "";
+                        
+                        //description for the result based on their answers provided
+                        var urgent = 'Based on your symptoms, you may need urgent medical care.' + "<br>" + 
+                                     'Please contact the nearest clinic/hospital for further medical checkup.';
+                        var attention = "It seems that you are not feeling well and your symptoms may be related to COVID-19. <br/>" +
+                                        "Please stay at home except to get medical care and stay a minimum of 1 metre away from other people. <br/> " +
+                                        "Please contact the nearest clinic/hospital immediately if your condition worsen. <Br/>" +
+                                        "You may be eligible for COVID-19 testing. For more information, contact your local health department or medical provider.";
+                        var healthy = "Your health condition is normal. <br/>" +
+                                      "You do not need a COVID-19 test at this time unless suggested or needed by public health official or medical provider.";
+                        var medical_staff = "Watch for COVID-19 symptoms at all times. If you develop symptoms, contact your nearest medical provider. <br/>" +
+                                            "Always wear a mask when around other people.";
+                        var close_contact = "Please stay at home for 14 days from the day you last had contact. <br/>" +
+                                            "Measure your temperature twice per day and watch for COVID-19 symptoms. <br/>" +
+                                            "Stay minimum 1 metre away from others and avoid crowded places. <br/>" +
+                                            "You may be eligible for COVID-19 testing. For more information, contact the local health department or medical provider.";
+                        var close_contact_symptom = "It seems like you have symptoms of COVID-19 and has close contact with someone that has COVID-19. <br/>" +
+                                                    "It is advisable that you take a COVID-19 test at your nearest health department or medical provider as soon as possible. ";
+                        
+                        nextButton1.onclick = function() {
+                            var q1 = document.selfcheck1.question1.value;
+                            if (q1 == "Yes") {
+                                selfcheck1.style.left = "-700px";
+                                setTimeout(() => {
+                                    document.getElementById('result').innerHTML = urgent;
+                                }, 1000);
+
+                            } else if (q1 == "No") {
+                                selfcheck1.style.left = "-700px";
+                                selfcheck2.style.left = "40px";
+                            }
+                        }
+                        nextButton2.onclick = function() {
+                            var q2 = document.selfcheck2.question2.value;
+                            if (q2 == "Yes") {
+                                selfcheck2.style.left = "-700px";
+                                selfcheck3.style.left = "40px";
+                            } else if (q2 == "No") {
+                                selfcheck2.style.left = "-700px";
+                                selfcheck3.style.left = "40px";
+                            }
+                            aq2 = q2;
+                        }
+                        nextButton3.onclick = function() {
+                            var q3 = document.selfcheck3.question3.value;
+                            if (q3 == "No") {
+                                selfcheck3.style.left = "-1200px";
+                                if (aq2 == "No") {
+                                    setTimeout(() => {
+                                        document.getElementById("result").innerHTML = healthy;
+                                    }, 1000);
+                                } else if (aq2 == "Yes") {
+                                    setTimeout(() => {
+                                        document.getElementById("result").innerHTML = attention;
+                                    }, 1000);
+                                }
+                            } else if (q3 == "Yes") {
+                                selfcheck3.style.left = "-1200px";
+                                selfcheck4.style.left = "40px";
+                            }
+                        }
+                        nextButton4.onclick = function() {
+                            var q4 = document.selfcheck4.question4.value;
+                            if (q4 == "No") {
+                                selfcheck4.style.left = "-1200px";
+                                if (aq2 == "Yes") {
+                                    setTimeout(() => {
+                                        document.getElementById("result").innerHTML = close_contact_symptom;
+                                    }, 1000);
+                                } else if (aq2 == "No") {
+                                    setTimeout(() => {
+                                        document.getElementById("result").innerHTML = close_contact;
+                                    }, 1000);
+                                }
+
+                            } else if (q4 == "Yes") {
+                                selfcheck4.style.left = "-1200px";
+                                if (aq2 == "Yes") {
+                                    setTimeout(() => {
+                                        document.getElementById("result").innerHTML = close_contact_symptom;
+                                    }, 1000);
+                                } else if (aq2 == "No") {
+                                    setTimeout(() => {
+                                        document.getElementById("result").innerHTML = medical_staff;
+                                    }, 1000);
+                                }
+                            }
+                        }
+                    </script>
+
+                </div>
+                <div id="result"></div>
+            </div>
+        </div>
+        <div id="page">
+            <div id="content"></div>
+            <div id="sidebar"></div>
+        </div>
+    </div>
+</body>
+
+</html>
